@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+ <body>
     <div class="main-work">
     <header>
         <h1>Sanni's Journal</h1>
@@ -16,30 +16,36 @@
     </header>
     
     <main>
-        <article>
-            <h2>13/05/23: Spatulas</h2>
-            <div class="article-heading"> 
-            <p>
-                Yesterday I went to the store and got some much-needed <a href="https://www.youtube.com/watch?v=2XbCWmY0eqY">spatulas!</a> (What better way to say I love myself than to buy myself a spatula?)
-            </p>
-            <p><img src="images/spatula.gif" alt="spatulas" class="spatula"></p>
-            </div>  
-        </article>
-        <article>
-            <h2>14/05/23: Cookie Monster Cupcakes</h2>
-          <div class="article-heading">
-            <p>My favorite cartoon character is Cookie Monster, and my favorite dessert is cupcakes, so Cookie Monster cupcakes are the best of both worlds.
-            <br> Did you know? Cookie Monster once said, <q>Sometimes me think what is love, and then me think love is what last cookie is for. Me give up the last cookie for you.</q> I wonder if the same applies for cupcakes? (If so, I don't think I can ever love ANYONE!)
-            </p>
-            <p><img src="images/cookiemonster.jpg" alt="cookie monster"></p>
+        <div class="btn">
+            <button id="click">Add a new note</button>
+            <span id="notes"></span>
+          </div>
+        <div class="article">
+            <article>
+                <h2>13/05/23: Spatulas</h2>
+                <div class="article-heading"> 
+                <p>
+                    Yesterday I went to the store and got some much-needed <a href="https://www.youtube.com/watch?v=2XbCWmY0eqY">spatulas!</a> (What better way to say I love myself than to buy myself a spatula?)
+                </p>
+                <p><img src="images/spatula.gif" alt="spatulas" class="spatula"></p>
+                </div>  
+            </article>
+            <article>
+                <h2>14/05/23: Cookie Monster Cupcakes</h2>
+            <div class="article-heading">
+                <p>My favorite cartoon character is Cookie Monster, and my favorite dessert is cupcakes, so Cookie Monster cupcakes are the best of both worlds.
+                <br> Did you know? Cookie Monster once said, <q>Sometimes me think what is love, and then me think love is what last cookie is for. Me give up the last cookie for you.</q> I wonder if the same applies for cupcakes? (If so, I don't think I can ever love ANYONE!)
+                </p>
+               <p><img src="images/cookiemonster.jpg" alt="cookie monster"></p> 
+            </div>
+            </article>  
            </div>
-        </article>
     </main>
     <hr>
     <footer>
     <h2 class="footer-heading">Stay connected</h2>
-    <p class="footer-heading paragraph">Join my mailing list.</p>
-    <form>
+    <p class="footer-heading-paragraph">Join my mailing list.</p>
+    <form class="personal_details">
         <p><input type="text" class="text" placeholder="First name"></p>
         <p><input type="text" class="text" placeholder="Email"></p>
         <p><input type="submit" value="Submit" class="btn_submit"></p>
@@ -47,6 +53,28 @@
     <p class="footer_copyright">&copy; 2023 Sanni. No Rights Reserved.</p>
     </footer>
 </div>
+    <div class="modal modal--hidden">
+        <div class="modal_contents">
+            <div class="modal_close-bar">
+             <span>X</span>
+            </div>
+            <p>Write your notes</p>
+            <form class="pop-up_details">
+            <div class="note_form">
+            <input type="text" placeholder="Your notes" class="notes-holder">
+            <textarea name="text" id="text-input"></textarea>  
+            </div>
+            <div class="btn_class">
+            <input class="btn_1" type="submit" disabled>  
+            <button class="btn_2">Cancel</button>
+             </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 
 </html>
+
+
